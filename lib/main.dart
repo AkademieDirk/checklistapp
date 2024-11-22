@@ -1,25 +1,27 @@
+import 'package:checklistapp/list_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(const MainApp());
 }
 
-class MainApp extends StatefulWidget {
+class MainApp extends StatelessWidget {
   const MainApp({super.key});
 
   @override
-  State<MainApp> createState() => _MainAppState();
-}
-
-class _MainAppState extends State<MainApp> {
-  @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+      home: ListScreen(),
+      // home: Scaffold(
+      //   body: Center(
+      //     child: ElevatedButton(
+      //         onPressed: () {
+      //           Navigator.push(
+      //               context,
+      //               MaterialPageRoute(
+      //                   builder: (context) => const ListScreen()));
+      //         },
+      //         child: const Text("Test")),
     );
   }
 }
